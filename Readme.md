@@ -26,21 +26,9 @@ The project name and version number can be customized in the `src/CMakeLists.txt
 project(game VERSION 0.1 LANGUAGES CXX)
 ```
 
-### Change the window size and switch to fullscreen
-
-The width and height of the output window can be adjusted in the `src/config.h.in` file.
-
-By removing the comment
-
-```
-//#define GAME_START_FULLSCREEN
-```
-
-the project starts in full screen mode.
-
 ### Manage assets
 
-Store assets in the designated 'assets' folder. The project already contains a sample graphic file. In the `main.cpp` file, this image is loaded and displayed.
+Store assets in the designated 'assets' folder. The project already contains some sample graphic files.
 
 ### Choose a different raylib version
 
