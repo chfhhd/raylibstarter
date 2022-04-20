@@ -25,8 +25,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC
         "${PROJECT_BINARY_DIR}"
         )
 
-# Link to Raylib and other libraries
-target_link_libraries(${PROJECT_NAME} raylib raylib_cpp core scenes)
+# Link to libraries
+target_link_libraries(${PROJECT_NAME} core scenes)
 
 # Copy assets to assets path
 add_custom_target(copy_assets
