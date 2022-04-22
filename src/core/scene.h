@@ -33,16 +33,12 @@ namespace game::core {
         }
 
         /**
-         * Create a new Actor object.
-         * @brief Constructor.
-         * @param sprite Sprite object that is assigned to the Actor.
+         * @brief The Update() method is used to process input and update the game state. It is called automatically before Draw() is called.
          */
         virtual void Update() = 0;
 
         /**
-         * Create a new Actor object.
-         * @brief Constructor.
-         * @param sprite Sprite object that is assigned to the Actor.
+         * @brief The Draw() method can be used to output graphics. Note that the elements of the actor map are drawn automatically.
          */
         virtual void Draw() = 0;
     };
