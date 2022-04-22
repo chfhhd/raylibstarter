@@ -1,12 +1,13 @@
 #pragma once
 
 #include <raylib.h>
+
 #include "scene.h"
 #include "sprite.h"
 
 namespace game::core {
     /**
-     * @brief A place for graphics and rendering oriented functions
+     * @brief A central place for graphics and rendering oriented functions
      */
     class Renderer final {
     public:

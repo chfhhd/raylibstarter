@@ -1,6 +1,6 @@
-#include "store.h"
-#include "stage.h"
 #include "renderer.h"
+
+#include "stage.h"
 
 void game::core::Renderer::DrawTexture(const std::shared_ptr<game::core::Sprite>& sprite) {
     DrawTexturePro(sprite->texture(), sprite->frame(),
