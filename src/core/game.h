@@ -4,6 +4,9 @@
 
 #include "scene.h"
 
+#define MAX(a, b) ((a)>(b)? (a) : (b))
+#define MIN(a, b) ((a)<(b)? (a) : (b))
+
 namespace game::core {
     /**
      * @brief The entry point into the game. The constructor is used to specify the basic settings such as the size of
@@ -58,5 +61,24 @@ namespace game::core {
         int stage_height_;
         bool audio_;
         bool mouse_;
+
+        RenderTexture2D render_target_ = { };
+
+        /**
+         * @brief Clamp Vector2 value with MIN and MAX and return a new vector2. Required for virtual mouse, to clamp
+         * inside virtual game size
+         */
+        [[nodiscard]] static Vector2 ClampValue(Vector2 value, Vector2 MIN, Vector2 MAX);
+
+        /**
+         * @brief Update virtual mouse position. This becomes necessary because the Raylib function GetMousePosition
+         * can no longer work correctly due to the scaling of the graphics output.
+         */
+        void UpdateMousePosition() const;
+
+        /**
+         * @brief Draws the correctly scaled and, if necessary, letterboxed graphic on the screen
+         */
+        void DrawRenderTexture() const;
     };
 }
