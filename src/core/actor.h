@@ -4,11 +4,10 @@
 
 namespace game::core {
     /**
-     * Actors can be placed in the actor-map of each scene class and will be drawn automatically if their visible
+     * Actors can be placed in the actor-map of a scene object and will be drawn automatically if their visible
      * attribute is true. If actor objects are supposed to be available across scenes, they can be stored in
      * game::core::actors. Objects that are only referenced there will not be drawn automatically.
      * The position of an actor object in the game depends on the position of its sprite attribute.
-     *
      * @brief Actor base class. Actors represent all game objects, such as players, enemies and other obstacles.
      */
     class Actor {

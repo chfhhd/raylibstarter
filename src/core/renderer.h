@@ -13,6 +13,7 @@ namespace game::core {
     public:
         /**
         * @brief Sprite object to be drawn. Oriented to the size, position and rotation angle of the sprite object.
+         * The method draws the texture of the sprite in any case - even if its visibility attribute is set to false.
         * @param sprite Sprite object to be drawn.
         */
         static void DrawTexture(const std::shared_ptr<game::core::Sprite> &sprite);
