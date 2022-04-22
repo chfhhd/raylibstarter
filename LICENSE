@@ -1,9 +1,10 @@
-This raylib project template for CMake is based on the CMakeLists.txt [1] example, the
+This raylib project template for CMake uses code from the CMakeLists.txt example [1], the
 cmake.yml workflow file [2] and the window scale letterbox example [3] provided in the
 raylib source code licenced under the zlib license. The template also includes the
 VisualStudio.gitignore [4] file from GitHub's gitignore repository licenced under
 the CC0-1.0 License. The Doxygen integration for CMake comes from a blog post by
-Victoria Rudakova [5].
+Victoria Rudakova [5]. The doxygen theme used is doxygen-awesome-css by
+jothepro [6] which is available under the MIT license.
 
 [1] https://github.com/raysan5/raylib/blob/master/projects/CMake/CMakeLists.txt
 [2] https://github.com/raysan5/raylib/blob/master/.github/workflows/cmake.yml
@@ -17,6 +18,9 @@ Copyright (c) GitHub and the GitHub's gitignore repository development team
 
 [5] https://vicrucann.github.io/tutorials/quick-cmake-doxygen/
 Copyright (c) Victoria Rudakova
+
+[6] https://github.com/jothepro/doxygen-awesome-css
+Copyright (c) jothepro
 
 The raylib project template is licenced under the zlib license:
 
