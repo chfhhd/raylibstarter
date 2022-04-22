@@ -10,12 +10,6 @@ namespace game::core {
      * the drawing area in pixels. Finally, a first game scene can be started via the Run() method.
      */
     class Game final {
-    private:
-        int stage_width_;
-        int stage_height_;
-        bool audio_;
-        bool mouse_;
-
     public:
         Game() = delete;
 
@@ -34,6 +28,10 @@ namespace game::core {
          */
         Game(int stage_width, int stage_height, bool full_screen, int target_fps, int window_flags, int exit_key,
              bool mouse, bool audio, const char *project_name);
+
+        Game(const game::core::Game &game) = delete;
+
+        Game &operator=(const Game &) = delete;
 
         ~Game();
 
@@ -54,5 +52,11 @@ namespace game::core {
          * @brief Starts the first game scene.
          */
         void Run(const std::string &scene_name, std::unique_ptr<game::core::Scene> scene) const;
+
+    private:
+        int stage_width_;
+        int stage_height_;
+        bool audio_;
+        bool mouse_;
     };
 }
