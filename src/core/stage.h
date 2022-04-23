@@ -16,7 +16,7 @@ namespace game::core {
 
         Stage(const std::string& new_scene_name, std::unique_ptr<game::core::Scene> scene);
 
-        Stage(const game::core::Texture2D &texture) = delete;
+        Stage(const game::core::Stage &stage) = delete;
 
         Stage &operator=(const Stage &) = delete;
 
