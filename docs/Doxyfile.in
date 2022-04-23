@@ -20,7 +20,6 @@ FULL_PATH_NAMES         = NO
 
 # graphviz and UML diagrams
 EXTRACT_ALL             = YES
-CLASS_DIAGRAMS          = YES
 HIDE_UNDOC_RELATIONS    = NO
 HAVE_DOT                = YES
 CLASS_GRAPH             = YES
