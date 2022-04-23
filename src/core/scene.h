@@ -22,6 +22,7 @@ namespace game::core {
      */
     class Scene {
     public:
+        /// Actors of the scene. The Actor objects of this map are drawn automatically by the Stage object if their visibility attribute is true.
         std::map<std::string, std::shared_ptr<game::core::Actor>> actors = { };
 
         Scene() {

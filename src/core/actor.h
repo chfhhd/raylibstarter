@@ -7,7 +7,7 @@ namespace game::core {
      * Actors can be placed in the actor-map of a scene object and will be drawn automatically if their visible
      * attribute is true. If actor objects are supposed to be available across scenes, they can be stored in
      * game::core::actors. Objects that are only referenced there will not be drawn automatically.
-     * The position of an actor object in the game depends on the position of its sprite attribute.
+     * The position and appearance of an actor object in the game depends on attributes (e.g. position and rotation) of its sprite member.
      * @brief Actor base class. Actors represent all game objects, such as players, enemies and other obstacles.
      */
     class Actor {
@@ -32,6 +32,7 @@ namespace game::core {
 
         /**
          * @brief Returns the sprite object of the actor
+         * @return Shared pointer of the objects Sprite.
          */
         [[nodiscard]] const std::shared_ptr<game::core::Sprite> &sprite() const;
 

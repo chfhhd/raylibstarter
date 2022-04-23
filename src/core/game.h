@@ -57,11 +57,16 @@ namespace game::core {
         void Run(const std::string &scene_name, std::unique_ptr<game::core::Scene> scene) const;
 
     private:
+        /// Width of the game scene (unscaled). Fixed for the entire run time of the game.
         int stage_width_;
+        /// Height of the game scene (unscaled). Fixed for the entire run time of the game.
         int stage_height_;
+        /// Defines whether the audio device is initialized.
         bool audio_;
+        /// Defines if the mouse support should be activated.
         bool mouse_;
 
+        /// Temporary render target, which will later be output correctly scaled on the screen.
         RenderTexture2D render_target_ = { };
 
         /**

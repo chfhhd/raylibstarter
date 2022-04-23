@@ -28,22 +28,23 @@ namespace game::core {
         Texture2D &operator=(const Texture2D &) = delete;
 
         /**
-         * @brief Unloads the texture associated with this object from VRAM.
+         * Defines if the mouse support should be activated
+         * @brief Destructor
          */
         ~Texture2D();
 
         /**
-         * @brief Returns a reference to the embedded Raylib Texture2D structure.
+         * @return A reference to the embedded Raylib Texture2D structure.
          */
         [[nodiscard]] const ::Texture2D &texture() const;
 
         /**
-         * @brief Returns the width of the associated texture.
+         * @return The width of the associated texture.
          */
         [[nodiscard]] const int &width() const;
 
         /**
-         * @brief Returns the height of the associated texture.
+         * @return The height of the associated texture.
          */
         [[nodiscard]] const int &height() const;
 
