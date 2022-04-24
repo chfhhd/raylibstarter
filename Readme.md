@@ -27,6 +27,8 @@ are downloaded automatically.
 
 The project already contains three pre-built scenes - for the main menu, the actual game scene and a pause scene.
 
+You can find more details about the usage in the docs: https://chfhhd.github.io/raylibstarter/
+
 ### Basic settings for the game
 
 Basic settings, e.g. whether the game starts in fullscreen mode, sound and mouse support and much more can be 
