@@ -15,8 +15,8 @@ namespace game::core {
         /// The Stage object is responsible for the scene change and for updating and drawing the scene contents
         inline static std::unique_ptr<game::core::Stage> stage = nullptr;
 
-        /// @brief The virtual mouse position.
         /// To get the mouse position the mouse support must be enabled when initializing the Game object.
+        /// @brief The virtual mouse position.
         inline static Vector2 mouse_position = { };
 
         /// Global game counter. Can be used e.g. for the calculation of animation times.

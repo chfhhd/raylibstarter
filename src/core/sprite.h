@@ -11,26 +11,37 @@ namespace game::core {
      * Besides the position and rotation angle, a sprite object is further defined by its rotation origin,
      * its tint and its visibility attribute. In addition, the visible section ("frame") of the associated
      * VRAM texture can be specified. This is especially important for the SpriteAnimated class derived from this class.
+     *
+     * Sprites can be drawn using the game::core::Renderer::DrawTexture function. However, the preferred way is to
+     * create Actor objects. These contain a sprite and are automatically drawn if they are referenced in the actors map
+     * of a Scene object.
+     *
      * @brief The Sprite class specifies position and degree of rotation on the screen for an associated VRAM texture.
      */
     class Sprite {
     protected:
         /// The sprites Texture2D
         std::shared_ptr<game::core::Texture2D> texture_;
+
         /// The section of the associated VRAM texture to be displayed as Raylib Rectangle structure.
         Rectangle frame_;
 
     public:
         /// Visibility of the Sprite.
         bool visible = true;
+
         /// The Raylib tint applied to the VRAM texture when drawing. Defulat ist Raylib WHITE.
         Color tint = WHITE;
+
         /// The sprites rotation origin, centered by default.
         Vector2 rotation_origin;
+
         /// The sprites rotation angle. Default is 0.
         float rotation = 0.0f;
+
         /// The sprites x position
         int pos_x = 0;
+
         /// The sprites y position
         int pos_y = 0;
 
@@ -38,7 +49,7 @@ namespace game::core {
 
         /**
          * This constructor sets the section of the texture to be displayed to its full size.
-         * In addition, the rotation origin is set to its center. The Sprite default position ust {0, 0}.
+         * In addition, the rotation origin is set to its center and rotation angle = 0. The sprites default position is {0, 0}.
          * @brief Constructor
          * @param texture Shared pointer to a Texture2D object.
          */
@@ -46,7 +57,7 @@ namespace game::core {
 
         /**
          * This constructor sets the section of the texture to be displayed to its full size.
-         * In addition, the rotation origin is set to its center. The sprites position can be specified.
+         * In addition, the rotation origin is set to its center and rotation angle = 0. The sprites position can be specified.
          * @brief Constructor
          * @param texture Shared pointer to a Texture2D object.
          * @param pos_x The sprites x position.

@@ -12,7 +12,7 @@ namespace game::core {
     class Renderer final {
     public:
         /**
-        * @brief Sprite object to be drawn. Oriented to the size, position and rotation angle of the sprite object.
+        * @brief Draw a sprite to the screen. Oriented to the size, position and rotation angle of the sprite object.
          * The method draws the texture of the sprite in any case - even if its visibility attribute is set to false.
         * @param sprite Sprite object to be drawn.
         */

@@ -10,6 +10,7 @@ namespace game::core {
      * Of course, it still makes sense to use one texture for several use cases (e.g. two sprite objects that use the
      * same texture) and to keep it in VRAM only once. The Texture2D class should therefore preferably be used with
      * smart pointers. With the last release of the object, the texture is then unloaded from the VRAM via the destructor.
+     *
      * @brief The class Texture2D encapsulates the Raylib structure Texture2D and takes care of the correct loading and unloading of the texture into the VRAM.
      */
     class Texture2D final {
