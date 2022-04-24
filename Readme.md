@@ -27,9 +27,14 @@ are downloaded automatically.
 
 The project already contains three pre-built scenes - for the main menu, the actual game scene and a pause scene.
 
+### Basic settings for the game
+
+Basic settings, e.g. whether the game starts in fullscreen mode, sound and mouse support and much more can be 
+configured in the file `src/config.h.in`.
+
 ### Changing the project title and version number
 
-The project name and version number can be customized in the `src/CMakeLists.txt` file. By default, the project 
+The project name and version number can be customized in the `src/CMakeLists.txt` file. By default, the project
 name is 'game':
 
 ```
@@ -38,7 +43,7 @@ project(game VERSION 0.1 LANGUAGES CXX)
 
 ### Manage assets
 
-Store assets in the designated 'assets' folder. The project already contains some sample graphic files.
+Store assets in the designated `assets` folder. The project already contains some sample graphic files.
 
 ### Choose a different raylib version
 
