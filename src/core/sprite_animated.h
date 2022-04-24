@@ -123,7 +123,7 @@ namespace game::core {
          * To switch to the new animation state call the nextState method.
          *
          * @brief Adds a new animation state
-         * @param row y-offset measured in rows (depending on the frame height, i.e. row 1 has a y-offset of 0px, row 2 has a y-offset of the height of an animation frame, etc.).*
+         * @param row y-offset measured in rows (depending on the frame height, i.e. row 1 has a y-offset of 0px, row 2 has a y-offset of the height of an animation frame, etc.).
          * @param steps Number of steps of the animation.
          * @param speed Speed of the frame-by-frame animation.
          * @param frame_width Width of a single animation frame.
@@ -141,21 +141,38 @@ namespace game::core {
         bool update_if_invisible = false;
 
     private:
+        /**
+         * @brief This structure contains all data necessary for the description of the frame-by-frame animation.
+         */
         struct anim_state {
+            /// y-offset measured in rows (depending on the frame height, i.e. row 1 has a y-offset of 0px, row 2 has a y-offset of the height of an animation frame, etc.).
             int row;
+            /// Number of steps of the animation.
             int steps;
+            /// Speed of the frame-by-frame animation.
             int speed;
+            /// Width of a single animation frame.
             float frame_width;
+            /// Height of a single animation frame.
             float frame_height;
         };
 
+        /// Stores the id of the current state
         int state_ = 0;
+
+        /// The id of the next state. The switch will happen after the current animation cycle is completed.
         int next_state_ = 0;
+
+        /// Internal animation cycle step counter
         int current_step_ = 0;
 
+        /// Vector that holds the individual state structs.
         std::vector<anim_state> states_;
 
+        /**
+         * The method is called internally by Update() and replaces the animation state with the one specified via this->next_state_.
+         * The call is made by Update() only when the current animation cycle has finished.
+         */
         void SwitchState();
-        void state(int state);
     };
 }

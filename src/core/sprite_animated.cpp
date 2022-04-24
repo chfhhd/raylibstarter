@@ -52,10 +52,6 @@ int game::core::SpriteAnimated::state() const {
     return this->state_;
 }
 
-void game::core::SpriteAnimated::state(int state) {
-    this->state_ = state;
-}
-
 void game::core::SpriteAnimated::nextState(int nextState) {
     this->next_state_ = nextState;
 }
