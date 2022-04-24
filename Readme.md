@@ -14,13 +14,23 @@
 
 A simple raylib project template for CMake and C/C++
 
+## Features
+
+This project template contains several basic classes, e.g. for animated sprites, a simple scene manager and more.
+
+It integrates the C++ wrapper raylib-cpp and includes and extensive API documentation.
+
 ## Usage
 
-Use CMake or a CMake compatible development environment to build a minimalistic raylib project. The raylib library will be downloaded automatically by CMake.
+After downloading the repository, use CMake to build the project. The Raylib library and all other dependencies 
+are downloaded automatically.
+
+The project already contains three pre-built scenes - for the main menu, the actual game scene and a pause scene.
 
 ### Changing the project title and version number
 
-The project name and version number can be customized in the `src/CMakeLists.txt` file. By default, the project name is 'game':
+The project name and version number can be customized in the `src/CMakeLists.txt` file. By default, the project 
+name is 'game':
 
 ```
 project(game VERSION 0.1 LANGUAGES CXX)
@@ -32,11 +42,20 @@ Store assets in the designated 'assets' folder. The project already contains som
 
 ### Choose a different raylib version
 
-Which raylib version is used can be specified in the `cmake/raylib.cmake` file. If this is changed after CMake has already created the project once, you must use CMake to completely rebuild the project.
+Which raylib version is used can be specified in the `cmake/raylib.cmake` file. If this is changed after CMake has 
+already created the project once, you must use CMake to completely rebuild the project.
+
+### Build the API documentation
+
+If you want to build the API documentation make sure you have Doxygen and Graphviz installed on your system. 
+CMake will then create the API documentation automatically. It will be located in the build folder under
+`src/docs_doxygen`.
 
 ### What next?
 
-The template already contains a menu, game and pause scene. Add your code to the existing scenes under `src/scenes` and/or create new scenes. You may never need to change the `main.cpp` file or the `main()` function itself directly.
+The template already contains a menu, game and pause scene. Add your code to the existing scenes under 
+`src/scenes` and/or create new scenes. You may never need to change the `main.cpp` file or the `main()` 
+function itself directly.
 
 ### Create a binary distribution
 
