@@ -1,11 +1,9 @@
 #include <memory>
-#include <string>
 #include <map>
 
 #include "stage.h"
 #include "renderer.h"
 #include "sprite.h"
-#include "sprite_animated.h"
 
 game::core::Stage::Stage(const std::string& new_scene_name, std::unique_ptr<game::core::Scene> scene) {
     this->next_scene_ = std::move(scene);
