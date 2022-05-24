@@ -16,8 +16,8 @@ using namespace std::string_literals;
 
 int main() {
     game::core::Game game(game::Config::kStageWidth, game::Config::kStageHeight, game::Config::kFullScreen,
-                          game::Config::kTargetFps, game::Config::kWindowFlags, game::Config::kExitKey,
-                          game::Config::kUseMouse, game::Config::kAudio, game::Config::kProjectName);
+                          game::Config::kTargetFps, game::Config::kWindowFlags, game::Config::kTextureFilter,
+                          game::Config::kExitKey,game::Config::kUseMouse, game::Config::kAudio, game::Config::kProjectName);
 
     game.Run("menu"s, std::make_unique<game::scenes::MenuScene>());
 

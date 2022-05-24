@@ -30,6 +30,10 @@ namespace game {
         // Default: GAME_CONFIG_FLAGS FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT | FLAG_MSAA_4X_HINT
         inline static constexpr const int kWindowFlags = FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT | FLAG_MSAA_4X_HINT;
 
+        // Texture scale filter to use, e.g. TEXTURE_FILTER_POINT, TEXTURE_FILTER_BILINEAR etc.
+        // Default: TEXTURE_FILTER_POINT for no filter, only pixel approximation
+        inline static constexpr const int kTextureFilter = TEXTURE_FILTER_POINT;
+
         // Define Raylib exit key - KEY_NULL means that no key leads to the termination of the program
         // Raylib default is KEY_ESCAPE
         inline static constexpr const int kExitKey = KEY_NULL;

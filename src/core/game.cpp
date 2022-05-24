@@ -8,7 +8,7 @@
 using namespace std::string_literals;
 
 game::core::Game::Game(int stage_width, int stage_height, bool full_screen, int target_fps, int window_flags,
-                       int exit_key, bool mouse, bool audio, const char *project_name)
+                       int texture_filter, int exit_key, bool mouse, bool audio, const char *project_name)
                        : stage_width_(stage_width), stage_height_(stage_height), audio_(audio), mouse_(mouse) {
     SetConfigFlags(window_flags);
     InitWindow(stage_width, stage_height, project_name);
@@ -18,7 +18,7 @@ game::core::Game::Game(int stage_width, int stage_height, bool full_screen, int 
     // Render texture initialization, used to hold the rendering result, so we can easily resize it
     this->render_target_ = LoadRenderTexture(this->stage_width_, this->stage_height_);
     // Set texture scale filter to use
-    SetTextureFilter(this->render_target_.texture, TEXTURE_FILTER_BILINEAR);
+    SetTextureFilter(this->render_target_.texture, texture_filter);
 
     SetExitKey(exit_key);
 

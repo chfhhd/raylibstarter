@@ -24,13 +24,14 @@ namespace game::core {
          * @param full_screen Start in full screen or window mode.
          * @param target_fps Target fps, usually 60 fps.
          * @param window_flags Raylib window flags, preffered: GAME_CONFIG_FLAGS FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT | FLAG_MSAA_4X_HINT
+         * @param texture_filter Texture scale filter to use, e.g. TEXTURE_FILTER_POINT, TEXTURE_FILTER_BILINEAR etc.
          * @param exit_key Game exit key. E.g. KEY_ESCAPE. Set it to KEY_NULL if the game app should not stop directly by pressing a key.
          * @param mouse If true, the mouse position is available in game::core::Store::mouse_position. Please do not use the Raylib function GetMousePosition()  which will not wok because of the scaling and letterboxing system.
          * @param audio If true, Raylib will initialize the audio device.
          * @param project_name Project name to be displayed as window title in Window mode.
          */
-        Game(int stage_width, int stage_height, bool full_screen, int target_fps, int window_flags, int exit_key,
-             bool mouse, bool audio, const char *project_name);
+        Game(int stage_width, int stage_height, bool full_screen, int target_fps, int window_flags,
+             int texture_filter, int exit_key, bool mouse, bool audio, const char *project_name);
 
         Game(const game::core::Game &game) = delete;
 
