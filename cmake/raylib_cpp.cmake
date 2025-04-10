@@ -5,7 +5,7 @@ if (NOT raylib_cpp_FOUND)
     FetchContent_Declare(
             raylib_cpp
             # Download a specific release
-            URL https://github.com/RobLoach/raylib-cpp/archive/refs/tags/v4.5.0.zip
+            URL https://github.com/RobLoach/raylib-cpp/archive/refs/tags/v5.5.0.zip
             # Or download current working state
             # URL https://github.com/RobLoach/raylib-cpp.git
     )
